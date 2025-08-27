@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nritanjali School of Dance</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Navbar */
+    nav {
+      transition: 0.4s ease;
+      backdrop-filter: blur(14px);
+    }
+    nav a {
+      font-weight: 500;
+      color: #fff !important;
+      margin: 0 10px;
+    }
+    nav.scrolled {
+      background: rgba(0,0,0,0.85) !important;
+    }
+
+    /* Hero */
+    .main-banner {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #bg-video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+      z-index: -1;
+    }
+    .video-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.3));
+      height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .video-overlay h1 {
+      font-size: 3rem;
+      color: #fff;
+      animation: fadeUp 1.5s ease;
+    }
+    .video-overlay p {
+      color: #ddd;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+    .btn-cta {
+      background: #b21f1f;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .btn-cta:hover {
+      background: #ff9800;
+      color: #fff;
+    }
+
+    /* Cards */
+    .card-modern {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+      background: #fff;
+    }
+    .card-modern:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Gallery */
+    .gallery-img-wrapper img {
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+    .gallery-img-wrapper img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #111, #222);
+      color: #aaa;
+      padding: 2rem 0;
+    }
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="main-banner">
+  <video autoplay muted loop playsinline id="bg-video" poster="images/1.jpg">
+    <source src="images/dance.mp4" type="video/mp4" />
+  </video>
+  <div class="video-overlay">
+    <h1>Welcome to <strong>Nritanjali School of Dance</strong></h1>
+    <p>Celebrating Tradition through Movement and Grace</p>
+    <a href="#courses" class="btn-cta mt-3">Explore Courses</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="images/logo.png" height="40" class="me-2"> Nritanjali
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#directors">Directors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2>Nritanjali School of Dance</h2>
+        <h5 class="text-muted">Preserving Tradition, Inspiring Creativity</h5>
+        <p>Located in Chathamangalam, Nritanjali is a premier institution dedicated to classical and contemporary performing arts. We provide structured training in Bharatanatyam, Kuchipudi, Mohiniyattam, Semi-Classical, Western Dance, and Carnatic Music. Our mission is to instill discipline, creativity, and cultural pride in each student.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="images/1.jpg" class="img-fluid rounded shadow" alt="Dance Illustration">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="py-5 bg-light">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="mb-4">Our Courses</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card-modern p-4">
+          <h5>Bharatanatyam</h5>
+          <p>One of the oldest classical dance forms rooted in devotion and tradition.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-modern p-4">
+          <h5>Kuchipudi</h5>
+          <p>Known for its elegance, fast rhythms, and expressive storytelling.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-modern p-4">
+          <h5>Mohiniyattam</h5>
+          <p>A graceful dance style from Kerala emphasizing soft movements and expressions.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-modern p-4">
+          <h5>Semi-Classical</h5>
+          <p>Combining classical roots with contemporary flair and rhythm.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-modern p-4">
+          <h5>Western Dance</h5>
+          <p>From Hip-Hop to Bollywood, we teach vibrant modern styles with energy.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-modern p-4">
+          <h5>Carnatic Music</h5>
+          <p>Vocal training in South Indian classical music with emphasis on technique and devotion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-5">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="mb-4">Gallery</h2>
+    <p class="mb-5 text-muted">A glimpse into our vibrant performances, classes, and celebrations at Nritanjali.</p>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4">
+        <a href="images/1.jpg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/1.jpg" class="img-fluid" alt="Gallery 1"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/2.jpg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/2.jpg" class="img-fluid" alt="Gallery 2"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/3.jpg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/3.jpg" class="img-fluid" alt="Gallery 3"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/4.jpg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/4.jpg" class="img-fluid" alt="Gallery 4"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/5.jpg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/5.jpg" class="img-fluid" alt="Gallery 5"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/6.jpg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/6.jpg" class="img-fluid" alt="Gallery 6"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/7.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/7.jpeg" class="img-fluid" alt="Gallery 7"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/8.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/8.jpeg" class="img-fluid" alt="Gallery 8"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/9.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/9.jpeg" class="img-fluid" alt="Gallery 9"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/10.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/10.jpeg" class="img-fluid" alt="Gallery 10"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/11.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/11.jpeg" class="img-fluid" alt="Gallery 11"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/12.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/12.jpeg" class="img-fluid" alt="Gallery 12"></div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="images/13.jpeg" class="glightbox">
+          <div class="gallery-img-wrapper"><img src="images/13.jpeg" class="img-fluid" alt="Gallery 13"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Directors -->
+<section id="directors" class="py-5 bg-light">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="mb-4">Our Directors</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-5 mb-4">
+        <div class="card-modern p-4 h-100">
+          <img src="images/d1.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h5>Guru Natyacharya Kalamandalam Sathyavrathan</h5>
+          <p class="text-muted">Founder and Director</p>
+          <p>Sree Kalalayam School of Dance and Music, Kozhikode</p>
+          <p><strong>Phone:</strong> <a href="tel:+919446400292">9446400292</a></p>
+        </div>
+      </div>
+      <div class="col-md-5 mb-4">
+        <div class="card-modern p-4 h-100">
+          <img src="images/d2.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h5>Dr Anjali Sathyan</h5>
+          <p class="text-muted">Co-Director</p>
+          <p>Founder Director, Nritanjali School of Dance</p>
+          <p>Trainer at AG Dance and Fitness Studio, Kozhikode</p>
+          <p>Professional dancer and choreographer with <strong>22 years</strong> of experience.</p>
+          <p>PG Diploma in Bharatanatyam, Kalaikaveri College, Coimbatore</p>
+          <p>Diploma in Kuchipudi, Bangalore University (under Dr Vyjayanthi Kashi)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact py-5 bg-light animate__animated animate__fadeInUp" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <h2 class="mb-4">Get in Touch</h2>
+        <p class="mb-3">We’d love to hear from you. Call or visit us for more details about our courses and performances.</p>
+        <ul class="list-unstyled">
+          <li><strong>Phone:</strong> <a href="tel:+917907693400">+91 7907 693 400</a></li>
+          <li><strong>Location:</strong> Opp. Sub Registrar Office, Chathamangalam</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="google-map w-100 mb-4">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125163.84439998401!2d75.76289252521136!3d11.380640066895669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba643b0d80e7473%3A0x3fbb40afe7879ab6!2sNritanjali%20school%20of%20dance!5e0!3m2!1sen!2sin!4v1745153280063!5m2!1sen!2sin" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+  <p>&copy; 2025 Nritanjali School of Dance. All Rights Reserved.</p>
+  <p>Crafted with passion ✨</p>
+</footer>
+
+<!-- GLightbox Script -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+  });
+</script>
+
+<!-- Bootstrap Bundle (fixes menu toggle issue) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+  window.addEventListener("scroll", function() {
+    var navbar = document.querySelector("nav");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+</body>
+</html>
